@@ -1,0 +1,6 @@
+framework module Pods_addoil {
+  umbrella header "Pods-addoil-umbrella.h"
+
+  export *
+  module * { export * }
+}
