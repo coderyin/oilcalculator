@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		5512688F4420D7F4442B6BCA /* Pods_addoil.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9A66C09FC65B4F321F9953A7 /* Pods_addoil.framework */; };
 		F342BFD31DE414DF00D42618 /* CalculatorViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F342BFD21DE414DF00D42618 /* CalculatorViewController.swift */; };
+		F3A3F7D11DE4400A00B6381E /* CustomTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3A3F7D01DE4400A00B6381E /* CustomTextField.swift */; };
 		F3AE674A1DDE952A00722CB3 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F3AE67491DDE952A00722CB3 /* AppDelegate.swift */; };
 		F3AE674F1DDE952B00722CB3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F3AE674D1DDE952A00722CB3 /* Main.storyboard */; };
 		F3AE67521DDE952B00722CB3 /* addoil.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = F3AE67501DDE952B00722CB3 /* addoil.xcdatamodeld */; };
@@ -21,6 +22,7 @@
 		9A66C09FC65B4F321F9953A7 /* Pods_addoil.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_addoil.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BEA8B8AB866E0CC462D93BAD /* Pods-addoil.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-addoil.release.xcconfig"; path = "Pods/Target Support Files/Pods-addoil/Pods-addoil.release.xcconfig"; sourceTree = "<group>"; };
 		F342BFD21DE414DF00D42618 /* CalculatorViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CalculatorViewController.swift; sourceTree = "<group>"; };
+		F3A3F7D01DE4400A00B6381E /* CustomTextField.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = CustomTextField.swift; path = View/CustomTextField.swift; sourceTree = "<group>"; };
 		F3AE67461DDE952A00722CB3 /* addoil.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = addoil.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F3AE67491DDE952A00722CB3 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F3AE674E1DDE952A00722CB3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -59,6 +61,22 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F3A3F7CE1DE43BFE00B6381E /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				F342BFD21DE414DF00D42618 /* CalculatorViewController.swift */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		F3A3F7CF1DE43FB300B6381E /* View */ = {
+			isa = PBXGroup;
+			children = (
+				F3A3F7D01DE4400A00B6381E /* CustomTextField.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
 		F3AE673D1DDE952A00722CB3 = {
 			isa = PBXGroup;
 			children = (
@@ -80,7 +98,8 @@
 		F3AE67481DDE952A00722CB3 /* addoil */ = {
 			isa = PBXGroup;
 			children = (
-				F342BFD21DE414DF00D42618 /* CalculatorViewController.swift */,
+				F3A3F7CF1DE43FB300B6381E /* View */,
+				F3A3F7CE1DE43BFE00B6381E /* ViewController */,
 				F3AE67491DDE952A00722CB3 /* AppDelegate.swift */,
 				F3AE674D1DDE952A00722CB3 /* Main.storyboard */,
 				F3AE67531DDE952B00722CB3 /* Assets.xcassets */,
@@ -215,6 +234,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F3A3F7D11DE4400A00B6381E /* CustomTextField.swift in Sources */,
 				F3AE674A1DDE952A00722CB3 /* AppDelegate.swift in Sources */,
 				F342BFD31DE414DF00D42618 /* CalculatorViewController.swift in Sources */,
 				F3AE67521DDE952B00722CB3 /* addoil.xcdatamodeld in Sources */,

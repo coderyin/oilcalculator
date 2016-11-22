@@ -8,33 +8,43 @@
 
 import UIKit
 import TextFieldEffects
-import DynamicColor
 
 class CalculatorViewController: UIViewController {
 
     @IBOutlet weak var displayLabel: UILabel!
-    
+    var oilPriceTextField: CustomTextField! = nil
+    var fuelConsumptionTextField: CustomTextField! = nil
+    var totalMoneyTextField: CustomTextField! = nil
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        let originalColor = DynamicColor(hexString: "#c0392b")
-
-        let desaturatedColor = originalColor.desaturated()
-
-        let grayscaledColor = originalColor.grayscaled()
+        self.view.backgroundColor = UIColor.gray
         
-        let textField = KaedeTextField(frame: CGRect(x: 0, y: 300, width: 320, height: 40));
-        textField.placeholderColor = grayscaledColor
-        textField.foregroundColor = desaturatedColor
-        textField.backgroundColor = grayscaledColor;
-//        self.view.addSubView(textField)
-        self.view.addSubview(textField)
-        // Do any additional setup after loading the view.
+        oilPriceTextField = CustomTextField(frame: CGRect(x: 0, y: 140, width: 320, height: 60));
+        oilPriceTextField.placeholder = "今日油价"
+        oilPriceTextField.placeholderColor = UIColor.blue
+        oilPriceTextField.foregroundColor = UIColor.gray
+        oilPriceTextField.backgroundColor = UIColor.groupTableViewBackground
+        self.view.addSubview(oilPriceTextField)
+        
+        fuelConsumptionTextField = CustomTextField(frame: CGRect(x: 0, y: 200, width: 320, height: 60));
+        fuelConsumptionTextField.placeholder = "平均油耗"
+        fuelConsumptionTextField.placeholderColor = UIColor.blue
+        fuelConsumptionTextField.foregroundColor = UIColor.gray
+        fuelConsumptionTextField.backgroundColor = UIColor.groupTableViewBackground
+        self.view.addSubview(fuelConsumptionTextField)
+        
+        totalMoneyTextField = CustomTextField(frame: CGRect(x: 0, y: 260, width: 320, height: 60));
+        totalMoneyTextField.placeholder = "加油金额"
+        totalMoneyTextField.placeholderColor = UIColor.blue
+        totalMoneyTextField.foregroundColor = UIColor.gray
+        totalMoneyTextField.backgroundColor = UIColor.groupTableViewBackground
+        self.view.addSubview(totalMoneyTextField);
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
