@@ -9,7 +9,7 @@
 import UIKit
 import TextFieldEffects
 
-class CalculatorViewController: UIViewController {
+class CalculatorViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var displayLabel: UILabel!
     var oilPriceTextField: CustomTextField! = nil
@@ -41,6 +41,12 @@ class CalculatorViewController: UIViewController {
         totalMoneyTextField.foregroundColor = UIColor.gray
         totalMoneyTextField.backgroundColor = UIColor.groupTableViewBackground
         self.view.addSubview(totalMoneyTextField);
+        
+        let button = UIButton(frame: CGRect(x: 20, y: 400, width: 200, height: 40))
+        button .setTitle("计算", for: UIControlState.normal)
+        button.addTarget(self, action: #selector(calculations), for: UIControlEvents.touchUpInside)
+        self.view.addSubview(button)
+        
     }
 
     override func didReceiveMemoryWarning() {
@@ -49,5 +55,16 @@ class CalculatorViewController: UIViewController {
     
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.view .endEditing(true)
+    }
+    
+    func calculations() {
+        let oilPrice = Float(oilPriceTextField.text!)
+        let fuelConsumption = Float(fuelConsumptionTextField.text!)
+        let totalMoney = Float(totalMoneyTextField.text!)
+        let oilLitres = totalMoney! / oilPrice!
+        
+        let kilometre = (oilLitres / fuelConsumption!) * 100
+        
+        displayLabel.text = "可跑" + String(kilometre);
     }
 }
